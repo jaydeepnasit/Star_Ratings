@@ -33,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                $t_rat = $t_rat + $ratings['ur_score'];
            }
            $AV_rating = $t_rat / $N_O_R;
+           $AV_rating = round($AV_rating, 1);
    
        }
 
