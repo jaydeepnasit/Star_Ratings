@@ -1,0 +1,114 @@
+
+*{
+    text-decoration: none !important;
+    list-style: none;
+}
+.user-area{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    margin: 0px 10px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    overflow: hidden;
+}
+.user-area img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.user-area:hover{
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+.logout i{
+    color: white !important;
+}
+
+/*   ------------ Star Rating CSS --------------   */
+
+.star{
+    direction: rtl;
+}
+.star input{
+    display: none;
+}
+.star label{
+    display: inline-block;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+    
+}
+.star label::before{
+    content: "\2605";
+    position: absolute;
+    font-size: 50px;
+    display: inline-block;
+    top: -20px;
+    right: 5px;
+}
+.star label::after{
+    content: "\2605";
+    position: absolute;
+    font-size: 50px;
+    display: inline-block;
+    color: orange;
+    opacity: 0;
+    top: -20px;
+    right: 5px;
+    transition: all 0.4s ease-in-out;
+}
+.star label:hover{
+    text-shadow: 0px 0px 3px black;
+}
+.star label:hover::after,
+.star label:hover ~ label::after,
+.star input:checked ~ label::after{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/*     -------------------- END ------------- */
+
+.box-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.con-box{
+    width: 250px;
+    height: 150px;
+    margin: 15px auto;
+    background-color: tomato;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.con-box a{
+    display: block;
+    height: 100%;
+    line-height: 150px;
+    color: white;
+    font-size: 5rem;
+}
+.con-box:hover{
+    background-color: orange;
+    box-shadow: 0px 0px 5px 1px gray;
+}
+
+.rating-al-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+    font-weight: 500;
+}
+.r-al-b{
+    padding: 5px;
+    text-align: center;
+}
